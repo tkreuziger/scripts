@@ -1,0 +1,4 @@
+.git/
+.venv/
+.ruff_cache/
+*.py[co]

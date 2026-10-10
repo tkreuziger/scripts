@@ -1,0 +1,28 @@
+[project]
+name = "markdown-to-org"
+description = "Convert Markdown files to Org-mode using Pandoc."
+readme = "README.md"
+requires-python = ">=3.10"
+dynamic = ["version"]
+license = { text = "MIT" }
+authors = [{ name = "Tristan Kreuziger" }]
+keywords = ["markdown", "org-mode", "pandoc", "converter"]
+classifiers = [
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Text Processing",
+]
+
+[project.scripts]
+markdown-to-org = "markdown_to_org.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "src/markdown_to_org/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/markdown_to_org"]
